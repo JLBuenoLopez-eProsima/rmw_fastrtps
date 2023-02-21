@@ -208,4 +208,4 @@ rmw_destroy_publisher(rmw_node_t * node, rmw_publisher_t * publisher)
   return rmw_fastrtps_shared_cpp::__rmw_destroy_publisher(
     eprosima_fastrtps_identifier, node, publisher);
 }
-}  // extern "C"
+}
