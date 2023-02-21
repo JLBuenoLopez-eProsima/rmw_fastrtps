@@ -24,10 +24,10 @@ jobs:
           git fetch --prune --unshallow
 
       - name: Install apt packages
-        uses: eProsima/eProsima-CI/tree/main/.github/actions/install-apt-packages@master
+        uses: eProsima/eProsima-CI/tree/main/.github/actions/install-apt-packages@v0.1
 
       - name: Install Python packages
-        uses: eProsima/eProsima-CI/tree/main/.github/actions/install-python-packages@master
+        uses: eProsima/eProsima-CI/tree/main/.github/actions/install-python-packages@v0.1
 
       - name: Install uncrustify
         run: |
