@@ -35,10 +35,10 @@ jobs:
 
 
       - name: Install apt packages
-        uses: ./src/eProsima-CI/tree/main/.github/actions/install-apt-packages
+        uses: ./src/eProsima-CI/.github/actions/install-apt-packages
 
       - name: Install Python packages
-        uses: ./src/eProsima-CI/tree/main/.github/actions/install-python-packages
+        uses: ./src/eProsima-CI/.github/actions/install-python-packages
 
       - name: Install uncrustify
         run: |
