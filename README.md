@@ -32,7 +32,7 @@ In addition to ROS 2 QoS policies, `rmw_fastrtps` sets two more Fast DDS configu
 
 * History memory policy: `PREALLOCATED_WITH_REALLOC_MEMORY_MODE`
 * Publication mode: `ASYNCHRONOUS_PUBLISH_MODE`
-
+gaHYGWEHYWYH
 However, `rmw_fastrtps` offers the possibility to further configure Fast DDS:
 
 * [Change publication mode](#change-publication-mode)
