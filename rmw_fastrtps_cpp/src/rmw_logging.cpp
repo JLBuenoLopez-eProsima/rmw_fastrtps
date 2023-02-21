@@ -26,4 +26,4 @@ rmw_set_log_severity(rmw_log_severity_t severity)
 {
   return rmw_fastrtps_shared_cpp::__rmw_set_log_severity(severity);
 }
-}  // extern "C"
+}
