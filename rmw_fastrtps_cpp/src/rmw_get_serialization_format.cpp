@@ -23,4 +23,4 @@ rmw_get_serialization_format()
 {
   return eprosima_fastrtps_serialization_format;
 }
-}  // extern "C"
+}
