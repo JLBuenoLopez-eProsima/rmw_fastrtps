@@ -14,9 +14,14 @@ jobs:
   uncrustify:
     runs-on: ubuntu-22.04
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           path: src/Fast-DDS-QoS-Profiles-Manager
+
+      - uses: actions/checkout@v3
+        with:
+          repository: eProsima/eProsima-CI
+          path: src/eProsima-CI
 
       - name: Fetch all branches and tags
         run: |
@@ -24,10 +29,10 @@ jobs:
           git fetch --prune --unshallow
 
       - name: Install apt packages
-        uses: eProsima/eProsima-CI/tree/main/.github/actions/install-apt-packages@v0.1
+        uses: ./src/eProsima-CI/tree/main/.github/actions/install-apt-packages
 
       - name: Install Python packages
-        uses: eProsima/eProsima-CI/tree/main/.github/actions/install-python-packages@v0.1
+        uses: ./src/eProsima-CI/tree/main/.github/actions/install-python-packages
 
       - name: Install uncrustify
         run: |
