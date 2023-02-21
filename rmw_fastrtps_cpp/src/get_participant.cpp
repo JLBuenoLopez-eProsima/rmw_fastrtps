@@ -35,4 +35,4 @@ get_domain_participant(rmw_node_t * node)
   return impl->participant_;
 }
 
-}  // namespace rmw_fastrtps_cpp
+}
