@@ -16,7 +16,7 @@ jobs:
     steps:
       - uses: actions/checkout@v3
         with:
-          path: src/Fast-DDS-QoS-Profiles-Manager
+          path: src/rmw_fastrtps
 
       - uses: actions/checkout@v3
         with:
@@ -25,8 +25,14 @@ jobs:
 
       - name: Fetch all branches and tags
         run: |
-          cd src/Fast-DDS-QoS-Profiles-Manager
+          cd src/rmw_fastrtps
           git fetch --prune --unshallow
+
+      - name: Fetch all branches and tags from actions repository
+        run: |
+          cd src/eProsima-CI
+          git fetch --prune --unshallow
+
 
       - name: Install apt packages
         uses: ./src/eProsima-CI/tree/main/.github/actions/install-apt-packages
@@ -55,13 +61,13 @@ jobs:
 
       - name: Get difference
         run: |
-          cd src/Fast-DDS-QoS-Profiles-Manager
+          cd src/rmw_fastrtps
           echo "MODIFIED_FILES=$(git diff --name-only origin/${GITHUB_BASE_REF} origin/${GITHUB_HEAD_REF} | grep -e '\.h' -e '\.hpp' -e '\.cpp' | tr '\n' ' ')" >> $GITHUB_ENV
 
       - name: Check style
         run: |
           source install/local_setup.bash
-          cd src/Fast-DDS-QoS-Profiles-Manager
+          cd src/rmw_fastrtps
           ament_uncrustify \
             -c ../../uncrustify.cfg \
             --language CPP \
