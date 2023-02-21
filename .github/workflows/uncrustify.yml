@@ -28,12 +28,6 @@ jobs:
           cd src/rmw_fastrtps
           git fetch --prune --unshallow
 
-      - name: Fetch all branches and tags from actions repository
-        run: |
-          cd src/eProsima-CI
-          git fetch --prune --unshallow
-
-
       - name: Install apt packages
         uses: ./src/eProsima-CI/.github/actions/install-apt-packages
 
