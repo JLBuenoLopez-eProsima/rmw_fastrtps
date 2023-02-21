@@ -28,4 +28,4 @@ rmw_compare_gids_equal(const rmw_gid_t * gid1, const rmw_gid_t * gid2, bool * re
   return rmw_fastrtps_shared_cpp::__rmw_compare_gids_equal(
     eprosima_fastrtps_identifier, gid1, gid2, result);
 }
-}  // extern "C"
+}
